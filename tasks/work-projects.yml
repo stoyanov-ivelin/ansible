@@ -1,0 +1,4 @@
+- name: git pull docker atscale
+  ansible.builtin.git:
+    repo: 'git@github.com:AtScaleInc/docker.git' 
+    dest: "{{ repos }}/docker"
