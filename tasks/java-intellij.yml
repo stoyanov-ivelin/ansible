@@ -1,0 +1,11 @@
+- name: Download Java 12
+    apt_repository: 
+      repo: ppa:openjdk-r/ppa 
+      state: present 
+- name: Install Java 
+    apt: 
+      name: ["openjdk-12-jdk"] 
+- name: Install ansible galaxy intellij role 
+    shell: ansible-galaxy install gantsign.intellij 
+roles: 
+  - role: gantsign.intellij
